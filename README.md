@@ -1,12 +1,26 @@
-<h1 align="center"> <b> PJP SYSTEM </b> </h1> 
+
 <p style="display: inline_block" ><br>
-  <img align="center" alt="C++" height=30% width="30%" src="https://cdn-icons.flaticon.com/png/512/2115/premium/2115955.png?token=exp=1660319853~hmac=da1c0b29a7e64727fffa4f8734b47d48">
+    <h1> 
+        <img alt="Logo" height=5% width="5%" src="img/binary-code.png">   
+        <b> PJP SYSTEM </b> </h1> 
 </p>
 
+
 ## Descrição:
+    - DESCRIÇÃO DO PRODUTO
+......
 
 ## Funcionalidades:
-- `Exbir tabela`
+- `ESCREVA AS FUNCIONALIDADES`
+......
+
+## Desenvolvedores:
+- Pedro Henrique Maciel Alves
+- Pedro Henrique dos Santos
+- Jhonatan Gardioli Lourenço
 
 ## Ferramentas utilizadas:
-![vscodeIMG]()
+- `Visual Studio Code`
+- `GIT`
+- `MySQL`
+.......
