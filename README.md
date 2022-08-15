@@ -8,11 +8,10 @@
 
 ## Descrição:
     - DESCRIÇÃO DO PRODUTO
-......
 
 ## Funcionalidades:
-- `ESCREVA AS FUNCIONALIDADES`
-......
+- `Login do usuário`
+
 
 ## Desenvolvedores:
 - Pedro Henrique Maciel Alves
@@ -20,7 +19,8 @@
 - Jhonatan Gardioli Lourenço
 
 ## Ferramentas utilizadas:
-- `Visual Studio Code`
-- `GIT`
-- `MySQL`
-.......
+- `Visual Studio Code - 1.69`
+- `GIT - 2.25.1`
+- `MySQL - 8.0`
+- `Figma`
+
