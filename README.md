@@ -7,10 +7,22 @@
 
 
 ## Descrição:
-    - DESCRIÇÃO DO PRODUTO
+- `DESCRIÇÃO DO PRODUTO`
+O sistema deverá gerenciar uma loja de vendas online de computadores, placas de vídeo e processadores, facilitando a realização de compras e vendas.
 
 ## Funcionalidades:
+- `Cadastro do usuário`
 - `Login do usuário`
+- `Realizar compra`
+- `Alterar compra`
+- `Excluir compra`
+- `Cadastrar produto`
+- `Alterar produto`
+- `Excluir produto`
+
+## Tipos de usuários:
+- `Cliente(usuário)`
+- `Dono(admin)`
 
 
 ## Desenvolvedores:
@@ -22,5 +34,7 @@
 - `Visual Studio Code - 1.69`
 - `GIT - 2.25.1`
 - `MySQL - 8.0`
+- `HTML5, CSS3 e JavaScript com BootStrap`
+- `NodeJs - 16.16.0`
 - `Figma`
 
