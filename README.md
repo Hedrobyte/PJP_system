@@ -13,7 +13,6 @@
 - [Desenvolvedores](#Desenvolvedores)
 - [Tecnologias utilizadas](#Tecnologias-utilizadas)
 
-
 ## Descrição:
 - `DESCRIÇÃO DO PRODUTO:`
 O sistema deverá gerenciar uma loja de vendas online de computadores, placas de vídeo e processadores, facilitando a realização de compras e vendas.
@@ -31,7 +30,6 @@ O sistema deverá gerenciar uma loja de vendas online de computadores, placas de
 ## Tipos de usuários:
 - `Cliente(usuário)`
 - `Dono(admin)`
-
 
 ## Desenvolvedores:
 - Pedro Henrique Maciel Alves
