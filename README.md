@@ -1,9 +1,17 @@
 
 <p style="display: inline_block" ><br>
     <h1> 
-        <img alt="Logo" height=5% width="5%" src="img/binary-code.png">   
+        <img alt="Logo" height=5% width="5%" src="img/logo-binary-code.png">   
         <b> PJP SYSTEM </b> </h1> 
 </p>
+
+## Índice
+
+- [Descrição](#Descrição)
+- [Funcionalidades](#Funcionalidades)
+- [Tipos de usuários](#Tipos-de-usuários)
+- [Desenvolvedores](#Desenvolvedores)
+- [Tecnologias utilizadas](#Tecnologias-utilizadas)
 
 
 ## Descrição:
@@ -30,7 +38,7 @@ O sistema deverá gerenciar uma loja de vendas online de computadores, placas de
 - Pedro Henrique dos Santos
 - Jhonatan Gardioli Lourenço
 
-## Ferramentas utilizadas:
+## Tecnologias utilizadas:
 - `Visual Studio Code - 1.69`
 - `GIT - 2.25.1`
 - `MySQL - 8.0`
