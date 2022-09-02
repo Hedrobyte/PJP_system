@@ -8,25 +8,45 @@
 </head>
 
 <body>
-    <header class="cabeçalho">
-        <img class="logo-nav" src="./image/logo-binary-code.png" alt="logo-nav">
-        <nav class="cabeçalho-menu">
-            <input class="cabeçalho-menu-item" type="text" name="search" placeholder="Pesquisar..">
-        </nav>
-        <div class="cabeçalho-perfil">
-            <a><img class="cabeçalho-perfil-imagem" src="./image/perfil-de-usuario.png" alt="figura de perfil"></a>
-            <a class="cabeçalho-perfil-conta">Conta</a>
+    <header>
+        <div class="cabeçalho">
+            <img src="./image/logo-binary-code.png" alt="logo-nav">
+            <nav>
+                <input type="text" name="search" placeholder="Pesquisar..">
+            </nav>
+            <div class="cabeçalho-perfil">
+                <div><img class="cabeçalho-perfil-imagem" src="./image/perfil-de-usuario.png" alt="figura de perfil">
+                </div>
+                <div class="cabeçalho-perfil-conta">Conta</div>
+            </div>
         </div>
     </header>
-    <main class="conteudo">
-        <section class="conteudo-principal">
+    <main>
+        <section class="sectionPrincipal">
             <form action="">
-                <fieldset>
-                    <legend><b>Cadastrar Produto</b></legend>
-                    <div>
-                        <input type="text" name="nome" id="nomeProduto" class="inputUser" placeholder="nome do produto" required>
-                    </div>
-                </fieldset>
+                <legend><b>Cadastrar Produto</b></legend>
+                <br>
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nomeProduto" class="inputUser" required>
+
+                </div>
+                <div>
+                    <label for="tipo">Tipo</label>
+                    <input type="text" name="tipo" id="nomeProduto" class="inputUser" required>
+                </div>
+                <div>
+                    <label for="preco">Preço</label>
+                    <input type="number" name="quantity" step="0.05" min="0.01" required>
+                </div>
+                <div>
+                    <label for="imagem">Imagem</label>
+                    <input type="file" name="foto" id="imagemIn" accept="image/png,image/jpeg" required>
+                </div>
+                <div class="botoes">
+                    <button class="form-bottom" type="submit">Cadastrar</button>
+                    <button class="form-bottom" type="submit">Voltar</button>
+                </div>
             </form>
         </section>
     </main>

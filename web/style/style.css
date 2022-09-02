@@ -1,48 +1,114 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
 body {
+    height: 100vh;
     padding: 0;
     margin: 0;
+    text-rendering: optimizelegibility;
     font-family: 'Josefin Sans', sans-serif;
 }
-.cabeçalho {
+header {
     background-color: #5e5e5e;
+}
+header .cabeçalho {
+    width: 100%;
+    max-width: 980px;
+    margin:auto;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 24px;
-    padding: 12px;
 }
-.logo-nav {
-    width: 32px;
-    margin-left: 12px;
+header .cabeçalho img {
+    width: 100%;
+    max-width: 48px;
+    margin: auto;
 }
-
-.cabeçalho-menu {
-    margin-left: 50%;
+header .cabeçalho nav {
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+    float:right;
 }
-.cabeçalho-menu-item {
+header .cabeçalho input {
+    height: 32px;
+    width: 240px;
     border: 1px solid #012D4E;
     -webkit-border-radius: 7px;
-   
 }
-.cabeçalho-perfil {
+header .cabeçalho .cabeçalho-perfil {
     display: flex;
     align-items: center;
     list-style: none;
     flex-direction: column;
 }
-.cabeçalho-perfil-imagem {
-    width: 26px;
+header .cabeçalho .cabeçalho-perfil-imagem {
+    width: 100%;
+    max-width: 32px;
 }
-.cabeçalho-perfil-conta {
+header .cabeçalho .cabeçalho-perfil-conta {
     color: #fff;
     background-color: #012D4E;
+    text-align: center;
+    min-width: 60px;
     font-size: 12px;
-    -webkit-border-radius: 7px;;
+    -webkit-border-image: 7px;
 }
-.cabeçalho-perfil-imagem, .logo-nav, .cabeçalho-perfil:hover {
+.cabeçalho-perfil-imagem, .cabeçalho-perfil:hover {
     cursor: pointer;
     opacity: 0.9;
+}
+main {
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+}
+form {
+    margin-top: 2%;
+    width: 50%;
+    display: block;
+    float: left;
+    justify-content:space-between;
+    align-items: flex-end;
+}
+main input {
+    background-color: #5e5e5e;
+    border: 1px solid #012D4E;
+    height: 32px;
+    width: 240px;
+    margin: 12px;
+    display: block;
+    -webkit-border-radius: 7px;
+}
+main #imagemIn {
+    background-color: #fff;
+    height: auto;
+}
+main .botoes {
+    margin-top: 5%;
+    width: 252px;
+    display: flex;
+    justify-content: space-around;
+}
+main .botoes .form-bottom {
+    border: 1px solid #012D4E;
+    height: 32px;
+    width: 240px;
+    margin: 12px;
+    -webkit-border-radius: 7px;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #5e5e5e inset, 0 0 0 0 #012D4E;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+main .botoes .form-bottom:hover {
+    transform: scale(1.1);
+    transition: all 1.5s;
 }
 
 
