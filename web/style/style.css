@@ -68,6 +68,11 @@ main {
     max-width: 980px;
     margin: auto;
 }
+.sectionPrincipal {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 form {
     margin-top: 2%;
     width: 50%;
@@ -110,6 +115,11 @@ main .botoes .form-bottom:hover {
     transform: scale(1.1);
     transition: all 1.5s;
 }
+
+main .sectionImg {
+    max-width: 400px;
+}
+
 
 
 
