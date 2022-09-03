@@ -8,6 +8,19 @@ async function cadastrarProduto(produto){
 }
 
 
+async function listarProdutos(){
+    const retorno = await produtoRepository.listarProdutos()
+    return retorno
+
+}
+
+async function excluirProduto(id){
+    await produtoRepository.excluirProduto(id)
+}
+
+
 export default{
-    cadastrarProduto
+    cadastrarProduto,
+    listarProdutos,
+    excluirProduto
 }

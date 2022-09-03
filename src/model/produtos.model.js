@@ -18,10 +18,6 @@ const produtos = db.define('produto', {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    quantidade:{
-        type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: false,
-    },
     preco:{
         type: Sequelize.DOUBLE,
         allowNull: false,

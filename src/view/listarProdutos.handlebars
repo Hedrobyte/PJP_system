@@ -1,0 +1,11 @@
+<h1>Produtos</h1>
+
+{{#each retorno}}
+    Nome: {{nome}}<br>
+    Categoria: {{categoria}}<br>
+    Preço: {{preco}}<br>
+    <a href="/produto/excluir-produto/{{id}}">
+    <button>Excluir</button>
+    </a>
+    <hr>
+{{/each}}

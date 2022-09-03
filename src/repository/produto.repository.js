@@ -3,13 +3,11 @@ import produtos from "../model/produtos.model.js"
 
 
 async function cadastrarProduto(produto){
-    console.log()
     try{
         produtos.create({
             nome: produto.getnome(),
             categoria: produto.getcategoria(),
-            quantidade: produto.getquantidade(),
-            preco: produto.getpreco()
+            preco: produto.getpreco(),
         })
         return "Cadastro Realizado"
     }catch(erro){
@@ -18,6 +16,24 @@ async function cadastrarProduto(produto){
     }
 }
 
+async function listarProdutos(){
+    const retorno = produtos.findAll()
+    return retorno
+
+}
+
+async function excluirProduto(id){
+    try{
+        produtos.destroy({
+            where: {'id': id}
+        })
+    }catch(erro){
+        console.log(erro)
+    }
+}
+
 export default{
-    cadastrarProduto
+    cadastrarProduto,
+    listarProdutos,
+    excluirProduto
 }
