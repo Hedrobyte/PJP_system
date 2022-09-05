@@ -63,6 +63,8 @@ header .cabeçalho .cabeçalho-perfil-conta {
     cursor: pointer;
     opacity: 0.9;
 }
+
+/*******************TELA DE CADASTRO DE PRODUTO************/
 main {
     width: 100%;
     max-width: 980px;
@@ -110,8 +112,9 @@ main .botoes .form-bottom:hover {
     transform: scale(1.1);
     transition: all 1.5s;
 }
+/****************************************************/
 
-/*sessao de resultado*/
+/**********SESSAO DE RESULTADO***********************/
 .main-resultado {
     width: 100%;
     height: 100%;
@@ -134,5 +137,31 @@ main .botoes .form-bottom:hover {
     transform: scale(1.1);
     transition: all 1.5s;
 }
-/******************************/
+/***************************************************/
 
+/**************TELA ADM*****************************/
+.container-adm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-adm-opcao {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap
+}
+.button-adm {
+    border: 1px solid #012D4E;
+    height: 32px;
+    width: 240px;
+    margin: 12px;
+    -webkit-border-radius: 7px;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #5e5e5e inset, 0 0 0 0 #012D4E;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+/***************************************************/
