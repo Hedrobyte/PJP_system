@@ -23,7 +23,7 @@
     </header>
     <main>
         <section class="sectionPrincipal">
-            <form action="">
+            <form action="http://localhost:8080/produto/cadastro" method="post">
                 <legend><b>Cadastrar Produto</b></legend>
                 <br>
                 <div>
@@ -33,19 +33,19 @@
                 </div>
                 <div>
                     <label for="tipo">Tipo</label>
-                    <input type="text" name="tipo" id="nomeProduto" class="inputUser" required>
+                    <input type="text" name="categoria" id="nomeProduto" class="inputUser" required>
                 </div>
                 <div>
                     <label for="preco">Preço</label>
-                    <input type="number" name="quantity" step="0.05" min="0.01" required>
+                    <input type="number" name="preco" step="0.01" min="0.01" required>
                 </div>
                 <div>
                     <label for="imagem">Imagem</label>
                     <input type="file" name="foto" id="imagemIn" accept="image/png,image/jpeg" required>
                 </div>
                 <div class="botoes">
-                    <button class="form-bottom" type="submit">Cadastrar</button>
-                    <button class="form-bottom" type="submit">Voltar</button>
+                    <button class="form-button" type="submit">Cadastrar</button>
+                    <button class="form-button" type="submit">Voltar</button>
                 </div>
             </form>
             <img class="sectionImg" src="./image/desingConfig.jpg" alt="imgDesign">
