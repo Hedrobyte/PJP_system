@@ -1,4 +1,14 @@
-<header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Página de cadastro</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <header>
         <div class="cabeçalho">
             <img src="./image/logo-binary-code.png" alt="logo-nav">
             <nav>
@@ -13,12 +23,12 @@
     </header>
     <main>
         <section class="sectionPrincipal">
-            <form action="http://localhost:8080/produto/cadastrar-produto" method="post">
+            <form action="http://localhost:8080/produto/cadastro" method="post">
                 <legend><b>Cadastrar Produto</b></legend>
                 <br>
                 <div>
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nomeProduto" class="inputUser" minlength="3" maxlength="50" required>
+                    <input type="text" name="nome" id="nomeProduto" class="inputUser" required>
 
                 </div>
                 <div>
@@ -29,16 +39,17 @@
                     <label for="preco">Preço</label>
                     <input type="number" name="preco" step="0.01" min="0.01" required>
                 </div>
+                <div>
+                    <label for="imagem">Imagem</label>
+                    <input type="file" name="foto" id="imagemIn" accept="image/png,image/jpeg" required>
+                </div>
                 <div class="botoes">
-                    <button class="form-button" type="submit">Cadastrar</button>
-                   
+                    <button class="form-bottom" type="submit">Cadastrar</button>
+                    <button class="form-bottom" type="submit">Voltar</button>
                 </div>
             </form>
-             <img class="sectionImg" src="./image/desingConfig.jpg" alt="imgDesign">
         </section>
-        <main id="main-listaProduto">
-            <a href="http://localhost:8080/produto/">
-                <button class="button-list">Voltar</button>
-            </a>
-        </main>
     </main>
+</body>
+
+</html>

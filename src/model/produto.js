@@ -1,19 +1,28 @@
 class Produto{
 
-    constructor(nome,categoria,preco){
-        this.nome = nome;
-        this.categoria = categoria;
-        this.preco = preco;
+    constructor(id ,nome,categoria,preco,visibilidade){
+        this.id = id
+        this.nome = nome
+        this.categoria = categoria
+        this.preco = preco
+        this.visibilidade = visibilidade
     }
-    getnome(){
+
+    getId(){
+        return this.id
+    }
+    getNome(){
         return this.nome
     }
 
-    getcategoria(){
+    getCategoria(){
         return this.categoria
     }
-    getpreco(){
+    getPreco(){
         return this.preco
+    }
+    getVisibilidade(){
+        return this.visibilidade
     }
 }
 

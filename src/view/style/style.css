@@ -226,11 +226,11 @@ button:hover {
     border-width: 1px;
     border-style: solid;
     border-color: #012D4E;
+    display:flex;
+    justify-content: left;
     margin-top: 12px;
     width: 600px;
-    height: 150px;
-    display: flex;
-    align-items: flex-end;
+    height: 150px;   
 }
 
 .button-list {

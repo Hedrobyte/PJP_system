@@ -1,15 +1,25 @@
-import express from "express";
+import express from "express"
 import  bodyParser from "body-parser"
 import produtoRoutes from "./routes/produto.routes.js"
 import handlebars from "express-handlebars"
-
+import moment from "moment"
 const app = express();
 
 app.use('/produto',express.static('view'))
-app.engine('handlebars', handlebars.engine({defaultLayout: 'main', runtimeOptions: {
+app.use('/produto/editar-produto',express.static('view'))
+app.engine('handlebars', handlebars.engine({
+    defaultLayout: 'main', 
+    runtimeOptions: {
     allowProtoPropertiesByDefault: true,
     allowProtoMethodsByDefault: true,
-},}))
+    },
+    helpers:{
+        formatDate: (date) =>{
+            return moment(date).format('DD/MM/YYYY')
+    }
+
+    }
+}))
 app.set('view engine', 'handlebars')
 app.set('views', './view');
 

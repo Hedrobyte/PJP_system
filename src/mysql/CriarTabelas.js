@@ -14,17 +14,21 @@ const produtos = sequelize.define('produto', {
         allowNull: false,
     },
     nome:{
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         unique: true,
         allowNull: false,
     },
     categoria:{
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(30),
         allowNull: false,
     },
     preco:{
-        type: Sequelize.DOUBLE,
+        type: Sequelize.DECIMAL(8,2),
         allowNull: false,
+    },
+    visibilidade:{
+        type: Sequelize.BOOLEAN,
+        allowNull:false,
     },
 })
 

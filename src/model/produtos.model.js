@@ -22,6 +22,10 @@ const produtos = db.define('produto', {
         type: Sequelize.DOUBLE,
         allowNull: false,
     },
+    visibilidade:{
+        type: Sequelize.BOOLEAN,
+        allowNull:false,
+    },
 })
 
 export default produtos

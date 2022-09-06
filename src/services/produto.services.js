@@ -18,9 +18,21 @@ async function excluirProduto(id){
     await produtoRepository.excluirProduto(id)
 }
 
+async function procurarProdutoeditar(id){
+    const retorno = produtoRepository.procurarProdutoeditar(id)
+    return retorno
+}
+
+async function editarProduto(produto){
+    const retorno = await produtoRepository.editarProduto(produto)
+    return retorno
+}
+
 
 export default{
     cadastrarProduto,
     listarProdutos,
-    excluirProduto
+    excluirProduto,
+    procurarProdutoeditar,
+    editarProduto
 }
