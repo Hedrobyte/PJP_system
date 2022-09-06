@@ -1,0 +1,7 @@
+#Banco de dados
+*.sql
+
+#composer
+/vendor
+composer.lock
+.phpunit.result.cache
