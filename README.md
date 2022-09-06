@@ -31,6 +31,14 @@ O sistema deverá gerenciar uma loja de vendas online de computadores, placas de
 - `Cliente(usuário)`
 - `Dono(admin)`
 
+## Estrutura:
+.
+├── Diagramas   
+├── img
+├── PadrõesAdotados
+├──  Requisitos
+└── src
+
 ## Desenvolvedores:
 - Pedro Henrique Maciel Alves
 - Pedro Henrique dos Santos
