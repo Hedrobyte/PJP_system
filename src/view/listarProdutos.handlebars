@@ -12,7 +12,40 @@
         </div>
 </header>
 
-<main id="main-listaProduto">
+
+<div class="container-fluid flex border border-dark p-3 my-3 mt-3" >
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço</th>
+                <th>Cadastro</th>
+                <th>Ultima modificação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each retorno}}
+            <tr>
+                <th>{{nome}}</th>
+                <th>{{categoria}}</th>
+                <th>R${{preco}}</th>
+                <th>{{#formatDate createdAt}}{{/formatDate}}</th>
+                <th>{{#formatDate updateAt}}{{/formatDate}}</th>
+            </tr>
+            {{/each}}
+        </tbody>
+
+
+    </table>
+    <a href="http://localhost:8080/produto">
+        <button class="btn btn-dark ml-10">Voltar</button>
+    </a>
+</div>
+
+
+
+<!--<main id="main-listaProduto">
     <div id="main-titulo"><h1><b>Lista de produtos</b></h1></div>
     {{#each retorno}}
         <section id="section-listaProduto">
@@ -21,7 +54,7 @@
                 <legend><b>Categoria: {{categoria}} </b><br>
                 <legend><b>Preço: R${{preco}}</b>
                 <legend><b>Cadastrado: {{#formatDate createdAt}}{{/formatDate}} </b></legend>
-            </div>
+            </div>-->
             <!--<div>
                 <a href="/produto/editar-produto/{{id}}">
                 <button class="button-list">Editar</button>
@@ -30,9 +63,9 @@
                 <button class="button-list">Excluir</button>
                 </a>
             </div>-->
-         </section>
+        <!-- </section>
     {{/each}}
     <a href="http://localhost:8080/produto">
     <button class="button-list">Voltar</button>
     </a>
-</main>
+</main>-->

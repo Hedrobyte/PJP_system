@@ -36,7 +36,7 @@ O sistema deverá gerenciar uma loja de vendas online de computadores, placas de
 ├── Diagramas   
 ├── img
 ├── PadrõesAdotados
-├──  Requisitos
+├── Requisitos
 └── src
 
 ## Desenvolvedores:

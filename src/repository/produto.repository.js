@@ -3,24 +3,21 @@ import produtos from "../model/produtos.model.js"
 
 
 async function cadastrarProduto(produto){
-    const resultado = await produtos.create({
-        nome: produto.getNome(),
-        categoria: produto.getCategoria(),
-        preco: produto.getPreco(),
-        visibilidade: produto.getVisibilidade(),
-    }).then(()=>{
-        console.log("Deu certo!!!")
-    }).catch((erro)=>{
-        console.log(erro)
-    })
+    
+    try{
+            await produtos.create({
+            nome: produto.getNome(),
+            categoria: produto.getCategoria(),
+            preco: produto.getPreco(),
+            visibilidade: produto.getVisibilidade(),
+        })
 
-    if(resultado instanceof produtos){
-        return "Cadastro Realizado com sucesso!!"
-    }
-    else{
-        return "Houve um erro ao cadastrar o produto"
+        return "Produto cadastrado com sucesso"
+    }catch(erro){
+        return "Houve algum erro ao cadastrar o produto"
     }
 }
+
 
 async function listarProdutos(){
     const retorno = produtos.findAll()
@@ -40,7 +37,7 @@ async function excluirProduto(id){
 
 
 async function procurarProdutoeditar(id){
-    var retorno
+    var retorno = null
     try{
         retorno = produtos.findOne({
             where: {'id':id}
@@ -48,20 +45,20 @@ async function procurarProdutoeditar(id){
         return retorno
     }catch(erro){
         console.log(erro)
+        retorno = null
+        return retorno
     }
 }
 
 async function editarProduto(produto){
     try{
-        produtos.findOne({
+        var pd = await produtos.findOne({
             where: {'id':produto.getId()}
-        }).then((pd) =>{
-            pd.nome = produto.getNome()
-            pd.categoria = produto.getCategoria()
-            pd.preco = produto.getPreco()
-
-            pd.save()
         })
+        pd.nome = produto.getNome()
+        pd.categoria = produto.getCategoria()
+        pd.preco = produto.getPreco()
+        await pd.save()
         return "Produto alterado com sucesso"
     }catch(erro){
         console.log(erro)

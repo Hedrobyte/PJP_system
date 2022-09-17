@@ -12,24 +12,37 @@
         </div>
 </header>
 
-<main id="main-listaProduto">
-    <div id="main-titulo"><h1><b>Lista de produtos</b></h1></div>
-    {{#each retorno}}
-        <section id="section-listaProduto">
-            <div>
-                <legend><b>Nome: {{nome}} </b><br>
-                <legend><b>Categoria: {{categoria}} </b><br>
-                <legend><b>Preço: R${{preco}}</b>
-                <legend><b>Cadastrado: {{#formatDate createdAt}}{{/formatDate}} </b></legend>
-            </div>
-            <div>
-                <a href="/produto/editar-produto/{{id}}">
-                <button class="button-list">Editar</button>
+<div class="container-fluid flex border border-dark p-3 my-3 mt-3" >
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço</th>
+                <th>Cadastro</th>
+                <th>Ultima modificação</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each retorno}}
+            <tr>
+                <th>{{nome}}</th>
+                <th>{{categoria}}</th>
+                <th>R${{preco}}</th>
+                <th>{{#formatDate createdAt}}{{/formatDate}}</th>
+                <th>{{#formatDate updateAt}}{{/formatDate}}</th>
+                <th><a href="/produto/editar-produto/{{id}}">
+                    <button class="btn btn-dark">Editar</button>
                 </a>
-            </div>
-         </section>
-    {{/each}}
+                </th>
+            </tr>
+            {{/each}}
+        </tbody>
+
+
+    </table>
     <a href="http://localhost:8080/produto">
-    <button class="button-list">Voltar</button>
+        <button class="btn btn-dark">Voltar</button>
     </a>
-</main>
+</div>
