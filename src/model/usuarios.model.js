@@ -2,7 +2,8 @@ import Sequelize from "sequelize"
 import db from "../repository/bd.js"
 
 
-const produtos = db.define('produto', {
+
+const usuarios = db.define('usuario', {
     id:{
         type: Sequelize.INTEGER.UNSIGNED,
         primaryKey: true,
@@ -10,21 +11,17 @@ const produtos = db.define('produto', {
         allowNull: false,
     },
     nome:{
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(50),
         allowNull: false,
     },
-    categoria:{
-        type: Sequelize.STRING,
+    email:{
+        type: Sequelize.STRING(30),
         allowNull: false,
     },
-    preco:{
-        type: Sequelize.DOUBLE,
+    senha:{
+        type: Sequelize.STRING(20),
         allowNull: false,
-    },
-    visibilidade:{
-        type: Sequelize.BOOLEAN,
-        allowNull:false,
     },
 })
 
-export default produtos
+export default usuarios
