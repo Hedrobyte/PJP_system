@@ -1,0 +1,68 @@
+<header>
+        <div class="cabeçalho">
+            <img src="./image/logo-binary-code.png" alt="logo-nav">
+            <nav>
+                <input type="text" name="search" placeholder="Pesquisar..">
+            </nav>
+            <div class="cabeçalho-perfil">
+                <div><img class="cabeçalho-perfil-imagem" src="./image/perfil-de-usuario.png" alt="figura de perfil">
+                </div>
+                <div class="cabeçalho-perfil-conta">Conta</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="sectionPrincipal">
+            <form action="http://localhost:8080/compra/alterar-compra" method="post">
+                <legend><b>Alterar Compra</b></legend>
+                <br>
+                <div>
+                    <label for="produto">Produto</label>
+                    <input type="text" name="nome" id="nomeProduto" class="inputUser" value="{{retorno.produto.nome}}" disabled>
+                </div>
+                 <div>
+                    <label for="preco">Preço</label>
+                    <input type="number" name="preco" value="{{retorno.produto.preco}}" disabled>
+                </div>
+
+                <div>
+                    <input type="hidden" name="id_produto" value="{{retorno.idProduto}}">
+                </div>
+                <div>
+                    <input type="hidden" name="id_compra" value="{{retorno.id}}">
+                </div>
+                </div>
+                <div>
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" name="quantidade" id="quantidadeProduto" class="inputUser"  step="1" min="1" value="{{retorno.quantidade}}" required>
+
+                </div>
+                <div>
+                    <label for="rua">Rua</label>
+                    <input type="text" name="rua" id="nomeRua" class="inputUser" minlength="3" maxlength="50" value="{{retorno.endereco.rua}}" required>
+                </div>
+                <div>
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" step="1" min="1" value="{{retorno.endereco.numero}}" required>
+                </div>
+                 {{#if error_login}}
+                    <div class="alert alert-danger">{{error_login}}</div>
+                {{/if}}
+                <div class="botoes">
+                    <button class="form-button" type="submit">Alterar Comprar</button>
+                   
+                </div>
+            </form>
+            <div>
+                <a href="http://localhost:8080/compra/alterar-produto/{{retorno.id}}">
+                        <button class="button-list">Trocar Produto</button>
+                </a>
+            </div>
+             <img class="sectionImg" src="./image/desingConfig.jpg" alt="imgDesign">
+        </section>
+        <main id="main-listaProduto">
+            <a href="http://localhost:8080/usuario/lista-compra">
+                <button class="button-list">Voltar</button>
+            </a>
+        </main>
+    </main>

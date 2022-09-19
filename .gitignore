@@ -1,7 +1,6 @@
-#Banco de dados
-*.sql
-
-#composer
-/vendor
-composer.lock
-.phpunit.result.cache
+#package-lock
+package-lock.json
+#Pasta com arquivo para criar as tabelas
+/src/mysql
+#Arquivos do diagrama
+*.asta

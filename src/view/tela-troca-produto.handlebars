@@ -1,0 +1,40 @@
+
+<header>
+        <div class="cabeçalho">
+            <img src="./image/logo-binary-code.png" alt="logo-nav">
+            <nav>
+                <input type="text" name="search" placeholder="Pesquisar..">
+            </nav>
+            <div class="cabeçalho-perfil">
+                <div><img class="cabeçalho-perfil-imagem" src="./image/perfil-de-usuario.png" alt="figura de perfil">
+                </div>
+                <div class="cabeçalho-perfil-conta">Conta</div>
+            </div>
+        </div>
+</header>
+<div class="container-fluid flex border border-dark p-3 my-3 mt-3" >
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Categoria</th>
+                <th>Preço</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each retorno}}
+            <tr>
+                <th>{{nome}}</th>
+                <th>{{categoria}}</th>
+                <th>R${{preco}}</th>
+                <th><a href="http://localhost:8080/compra/alterar-pd/{{id}}">
+                    <button class="btn btn-dark">selecionar</button>
+                </a>
+                </th>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+   
+</div>

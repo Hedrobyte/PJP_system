@@ -11,7 +11,6 @@ const produtos = db.define('produto', {
     },
     nome:{
         type: Sequelize.STRING,
-        unique: true,
         allowNull: false,
     },
     categoria:{

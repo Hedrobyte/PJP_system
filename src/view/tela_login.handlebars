@@ -1,0 +1,27 @@
+<body>
+    <main>
+        <div class="left-login">
+            <img src="./image/logo-binary-code.png" alt="img-log">
+            <h1>PJP SYSTEM</h1>
+        </div>
+        <form class="right-login" action="http://localhost:8080/usuario/login" method="post">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textField">
+                    <label for="usuario">Usuário</label>
+                    <input type="email" name="usuario" maxlength="30" required>
+                </div>
+                <div class="textField">
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" minlength="6" maxlength="20" required>
+                </div>
+                {{#if error_login}}
+                    <div class="alert alert-danger">{{error_login}}</div>
+                {{/if}}
+                <button type="submit" class="btn-login">Login</button>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

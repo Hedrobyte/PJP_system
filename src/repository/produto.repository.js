@@ -1,15 +1,16 @@
 //import Sequelize from "sequelize"
 import produtos from "../model/produtos.model.js"
+import compras from "../model/compras.model.js"
 
 
 async function cadastrarProduto(produto){
     
     try{
-            await produtos.create({
-            nome: produto.getNome(),
-            categoria: produto.getCategoria(),
-            preco: produto.getPreco(),
-            visibilidade: produto.getVisibilidade(),
+        await produtos.create({
+        nome: produto.getNome(),
+        categoria: produto.getCategoria(),
+        preco: produto.getPreco(),
+        visibilidade: produto.getVisibilidade(),
         })
 
         return "Produto cadastrado com sucesso"
@@ -20,16 +21,35 @@ async function cadastrarProduto(produto){
 
 
 async function listarProdutos(){
-    const retorno = produtos.findAll()
+    const retorno = produtos.findAll({
+        where: {'visibilidade': true}
+    })
     return retorno
 
 }
 
 async function excluirProduto(id){
     try{
-        produtos.destroy({
-            where: {'id': id}
+        const existe = await compras.findOne({
+            where: {'idProduto': id}
         })
+        if(existe == null){
+            produtos.destroy({
+                where: {'id': id}
+            })
+        }
+        else{
+            var pd = await produtos.findOne({
+                where: {'id': id}
+            })
+            if(pd == null){
+                return false
+            }
+            else{
+                pd.visibilidade = false
+                await pd.save()
+            }
+        }
     }catch(erro){
         console.log(erro)
     }
@@ -40,7 +60,8 @@ async function procurarProdutoeditar(id){
     var retorno = null
     try{
         retorno = produtos.findOne({
-            where: {'id':id}
+            where: {'id':id,
+                    'visibilidade': true}
         })
         return retorno
     }catch(erro){
