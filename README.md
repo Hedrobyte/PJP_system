@@ -52,12 +52,9 @@ O sistema deverá gerenciar uma loja de vendas online de computadores, placas de
 
 
 ## Estrutura:
-.
-├── Diagramas   
-├── img
-├── PadrõesAdotados
-├── Requisitos
-└── src
+- `docs`(Documentação)
+- `img`(imagem usada no readme)
+- `src`(códigos)
 
 ## Desenvolvedores:
 - Pedro Henrique Maciel Alves
