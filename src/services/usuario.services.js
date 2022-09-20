@@ -31,11 +31,23 @@ async function buscarInformacaoConta(id){
     return retorno
 }
 
+async function realizarCadastroEndereco(endereco){
+    const retorno = await usuarioRepository.realizarCadastroEndereco(endereco)
+    return retorno
+}
+
+async function excluirEndereco(id_endereco){
+    const retorno = await usuarioRepository.excluirEndereco(id_endereco)
+    return retorno
+}
+
 export default{
     realizarLogin,
     procurarEndereco,
     procurarUsuario,
     listaCompra,
     excluirCompra,
-    buscarInformacaoConta
+    buscarInformacaoConta,
+    realizarCadastroEndereco,
+    excluirEndereco
 }

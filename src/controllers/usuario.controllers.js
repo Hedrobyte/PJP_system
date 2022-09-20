@@ -1,6 +1,7 @@
 import usuarioServices from "../services/usuario.services.js"
 import Usuario from "../model/usuario.js"
 import produtoServices from "../services/produto.services.js"
+import Endereco from "../model/endereco.js"
 
 
 async function realizarLogin(req,res){
@@ -84,6 +85,40 @@ async function buscarInformacaoConta(req,res){
 }
 
 
+async function cadastrarEndereco(req,res){
+    res.render('tela-cadastro-endereco')
+}
+
+async function realizarCadastroEndereco(req,res){
+    const endereco = new Endereco(null, req.body.rua,req.body.numero)
+    const retorno = await usuarioServices.realizarCadastroEndereco(endereco)
+    if(retorno){
+        req.flash("success_login", "Cadastro de endereço realizado com sucesso")
+        res.redirect('/usuario/informacao-conta')
+    }
+    else{
+        req.flash("error_login", "Houve um erro ao realizar o cadastro do endereço")
+        res.redirect('/usuario/informacao-conta')
+    }
+}
+
+
+async function excluirEndereco(req,res){
+    const id_endereco = req.params.id
+    console.log(id_endereco)
+    const retorno = await usuarioServices.excluirEndereco(id_endereco)
+    if(retorno){
+        req.flash("success_login", "Endereço excluído com sucesso")
+        res.redirect('/usuario/informacao-conta')
+    }
+    else{
+        req.flash("error_login", "Não é possível excluir esse endereço")
+        res.redirect('/usuario/informacao-conta')
+    }
+
+}
+
+
 
 
 
@@ -93,5 +128,8 @@ export default{
     telaPrincipal,
     listaCompra,
     excluirCompra,
-    buscarInformacaoConta
+    buscarInformacaoConta,
+    cadastrarEndereco,
+    realizarCadastroEndereco,
+    excluirEndereco
 }

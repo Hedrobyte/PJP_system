@@ -23,13 +23,25 @@
                     <div class="info-box">{{rua}}</div>
                     <p>Número: </p>
                     <div class="info-box">{{numero}}</div>
+                    <a href="http://localhost:8080/usuario/excluir-endereco/{{id}}">
                     <button class="btn-exluir">EXCLUIR</button>
+                    </a>
                 </div>
                 {{/each}}
+                {{#if error_login}}
+                    <div class="alert alert-danger">{{error_login}}</div>
+                {{/if}}
+                {{#if success_login}}
+                    <div class="alert alert-success">{{success_login}}</div>
+                {{/if}}
             </div>
         </div>
         <div class="down-main">
+            <a href="http://localhost:8080/usuario/principal">
             <button class="btn-voltar">VOLTAR</button>
+            </a>
+            <a href="http://localhost:8080/usuario/cadastrar-endereco">
             <button class="btn-cadastrarEndereco">CADASTRAR NOVO ENDEREÇO</button>
+             </a>
         </div>
     </main>

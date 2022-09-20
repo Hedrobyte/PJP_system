@@ -1,15 +1,6 @@
 <header>
         <div class="cabeçalho">
             <img src="./image/logo-binary-code.png" alt="logo-nav">
-            <nav>
-                <input type="text" name="search" placeholder="Pesquisar..">
-            </nav>
-            <div class="cabeçalho-perfil">
-                <div><img class="cabeçalho-perfil-imagem" src="./image/perfil-de-usuario.png" alt="figura de perfil">
-                </div>
-                <div class="cabeçalho-perfil-conta">Conta</div>
-            </div>
-        </div>
 </header>
 {{#if error_login}}
     <div class="alert alert-danger">{{error_login}}</div>
@@ -46,5 +37,8 @@
             {{/each}}
         </tbody>
     </table>
+    <a href="http://localhost:8080/usuario/principal">
+        <button class="btn btn-dark ml-10">Voltar</button>
+    </a>
    
 </div>

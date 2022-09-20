@@ -1,0 +1,32 @@
+<header>
+        <div class="cabeçalho">
+            <img src="./image/logo-binary-code.png" alt="logo-nav">
+        </div>
+</header>
+    <main>
+        <section class="sectionPrincipal">
+            <form action="http://localhost:8080/usuario/cadastrar-endereco" method="post">
+                <legend><b>Cadastrar Endereço</b></legend>
+                <br>
+                <div>
+                    <label for="rua">Rua</label>
+                    <input type="text" name="rua" id="nomeRua" class="inputUser" minlength="3" maxlength="30" required>
+
+                </div>
+                <div>
+                    <label for="numero">Número</label>
+                    <input type="number" name="numero" id="idNumero" step="1" min="1" required>
+                </div>
+                <div class="botoes">
+                    <button class="form-button" type="submit">Cadastrar</button>
+                   
+                </div>
+            </form>
+             <img class="sectionImg" src="./image/desingConfig.jpg" alt="imgDesign">
+        </section>
+        <main id="main-listaProduto">
+            <a href="http://localhost:8080/usuario/informacao-conta">
+                <button class="button-list">Voltar</button>
+            </a>
+        </main>
+    </main>

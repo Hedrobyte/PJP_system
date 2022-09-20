@@ -2,6 +2,7 @@ import usuarios from "../model/usuarios.model.js"
 import enderecos from "../model/enderecos.model.js"
 import produtos from "../model/produtos.model.js"
 import compras from "../model/compras.model.js"
+import { createPool } from "mysql"
 
 async function realizarLogin(usuario){
     try{
@@ -91,6 +92,41 @@ async function buscarInformacaoConta(id){
     }
 }
 
+async function realizarCadastroEndereco(endereco){
+    try{
+        await enderecos.create({
+            rua: endereco.getRua(),
+            numero: endereco.getNumero(),
+            idUsuario: id
+        })
+        return true
+    }catch(erro){
+        console.log(erro)
+        return false
+    }
+}
+
+async function excluirEndereco(id_endereco){
+    try{
+        const compra = await compras.findOne({
+            where: {'idEndereco': id_endereco}
+        })
+
+        if(compra == null){
+            await enderecos.destroy({
+                where: {'id': id_endereco}
+            })
+            return true
+        }
+        else{
+            return false
+        }
+    }catch(erro){
+        console.log(erro)
+        return false
+    }
+}
+
 
 export default{
     realizarLogin,
@@ -98,5 +134,7 @@ export default{
     procurarUsuario,
     listaCompra,
     excluirCompra,
-    buscarInformacaoConta
+    buscarInformacaoConta,
+    realizarCadastroEndereco,
+    excluirEndereco
 }
