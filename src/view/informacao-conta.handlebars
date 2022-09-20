@@ -1,0 +1,35 @@
+ <header>
+        <div class="cabeçalho">
+            <img src="./image/logo-binary-code.png" alt="logo-nav">
+        </div>
+    </header>
+    <main>
+        <div class="top-main">
+            <img src="./image/perfil-de-usuario.png" alt="imgPerfil">
+        </div>
+        <div class="mid-main">
+            <div class="info">
+                <div class="info-usuario">
+                    <p>Nome: </p>
+                    <div class="info-box">{{usuario.nome}}</div>
+                </div>
+                <div class="info-usuario">
+                    <p>E-mail: </p>
+                    <div class="info-box">{{usuario.email}}</div>
+                </div>
+                {{#each endereco}}
+                <div class="info-usuario">
+                    <p>Rua: </p>
+                    <div class="info-box">{{rua}}</div>
+                    <p>Número: </p>
+                    <div class="info-box">{{numero}}</div>
+                    <button class="btn-exluir">EXCLUIR</button>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="down-main">
+            <button class="btn-voltar">VOLTAR</button>
+            <button class="btn-cadastrarEndereco">CADASTRAR NOVO ENDEREÇO</button>
+        </div>
+    </main>

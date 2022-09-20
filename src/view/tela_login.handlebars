@@ -9,11 +9,11 @@
                 <h1>LOGIN</h1>
                 <div class="textField">
                     <label for="usuario">Usuário</label>
-                    <input type="email" name="usuario" maxlength="30" required>
+                    <input type="email" data-cy="nome" name="usuario" maxlength="30" required>
                 </div>
                 <div class="textField">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" minlength="6" maxlength="20" required>
+                    <input type="password" data-cy="senha" name="senha" minlength="6" maxlength="20" required>
                 </div>
                 {{#if error_login}}
                     <div class="alert alert-danger">{{error_login}}</div>

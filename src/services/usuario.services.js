@@ -26,10 +26,16 @@ async function excluirCompra(id){
     return retorno
 }
 
+async function buscarInformacaoConta(id){
+    const retorno = await usuarioRepository.buscarInformacaoConta(id)
+    return retorno
+}
+
 export default{
     realizarLogin,
     procurarEndereco,
     procurarUsuario,
     listaCompra,
-    excluirCompra
+    excluirCompra,
+    buscarInformacaoConta
 }

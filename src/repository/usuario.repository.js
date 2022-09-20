@@ -75,11 +75,28 @@ async function excluirCompra(id){
     }
 }
 
+async function buscarInformacaoConta(id){
+    try{
+        const endereco = await enderecos.findAll({
+            where: {'idUsuario':id}
+        })
+        const usuario = await usuarios.findOne({
+            where: {'id':id}
+        })
+        const retorno = [usuario, endereco]
+        //console.log(retorno[0].usuario.nome)
+        return retorno
+    }catch(erro){
+        console.log(erro)
+    }
+}
+
 
 export default{
     realizarLogin,
     procurarEndereco,
     procurarUsuario,
     listaCompra,
-    excluirCompra
+    excluirCompra,
+    buscarInformacaoConta
 }

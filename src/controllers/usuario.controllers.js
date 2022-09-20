@@ -78,6 +78,12 @@ async function excluirCompra(req,res){
 }
 
 
+async function buscarInformacaoConta(req,res){
+    const retorno = await usuarioServices.buscarInformacaoConta(id)
+    res.render('informacao-conta', {usuario:retorno[0], endereco:retorno[1]})
+}
+
+
 
 
 
@@ -86,5 +92,6 @@ export default{
     realizarLogin,
     telaPrincipal,
     listaCompra,
-    excluirCompra
+    excluirCompra,
+    buscarInformacaoConta
 }
