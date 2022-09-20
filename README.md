@@ -52,6 +52,12 @@ O sistema deverá gerenciar uma loja de vendas online de computadores, placas de
 
 
 ## Estrutura:
+```
+raiz/
+├── docs (Documentação)
+└── img (imagem usada no readme)
+└── src (Códigos)
+```
 - `docs`(Documentação)
 - `img`(imagem usada no readme)
 - `src`(códigos)
